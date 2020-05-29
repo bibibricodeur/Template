@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Template</title>
+        <!-- https://fr.wikipedia.org/wiki/Favicon -->
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/framework.css" media="all">
+        <link rel="stylesheet" href="css/style.css" media="all">
+    </head>
+
+    <body id="hautPage">
+
+        <main>
+
+            <header class="flex-conteneur">
+                <div class="col-03">
+                    <img class="logo" src="img/logo_pascale_480x240.png" style="width: 360px;"/>
+                </div>
+                <div class="col-06">
+                    <h1>Template</h1>
+                </div>
+                <div class="col-03"></div>
+            </header>
+
+            <nav>
+                <input type="checkbox" id="bascule">
+                <label for="bascule" class="hamburger">&#9776; Navigation</label>
+                <ul id="menu">
+                    <li>
+                        <a class="active" href="#">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#">Nouvelles</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Mentions légales</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="flex-conteneur">
+                <div class="col-09">
+                    <article>
+                        <h2>Article</h2>
+                        <p>Je suis le premier article</p>
+                        <form>
+                            <textarea placeholder="Un peu de texte..."></textarea>
+                        </form>
+                    </article>
+                    <article>
+                        <h2>Article</h2>
+                        <p>Je suis le second article</p>
+                        <table>
+                            <tr>
+                                <th>colonne 01</th>
+                                <th>colonne 02</th>
+                                <th>colonne 03</th>
+                            </tr>
+                            <tr>
+                                <td>cellule 01</td>
+                                <td>cellule 02</td>
+                                <td>cellule 03</td>
+                            </tr>
+                            <tr>
+                                <td>cellule 04</td>
+                                <td>cellule 05</td>
+                                <td>cellule 06</td>
+                            </tr>
+                            <tr>
+                                <td>cellule 07</td>
+                                <td>cellule 08</td>
+                                <td>cellule 09</td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article>
+                        <h2>Article</h2>
+                        <p>Je suis le troisième article</p>
+                        <form action="#">
+                            <label for="prenom">Prenom</label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom...">
+
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom...">
+
+                            <label for="pays">Pays</label>
+                            <select id="pays" name="pays">
+                                <option value="france">France</option>
+                                <option value="belgique">Belgique</option>
+                                <option value="suisse">Suisse</option>
+                            </select>
+                            <input type="submit" class="bouton bouton-succes" value="Valider">
+                        </form>
+                    </article>
+                    <article>
+                        <h2>Article</h2>
+                        <p>Je suis le quatrième article</p>
+                        <button class="bouton bouton-succes">succes</button>
+                        <button class="bouton bouton-info">info</button>
+                        <button class="bouton bouton-danger">danger</button>
+                        <button class="bouton bouton-normal">normal</button>
+                    </article>
+                    <article>
+                        <h2>Article</h2>
+                        <p>Je suis le cinquième article</p>
+                        <pre>
+                        <code>
+&lt;h1>Test code&lt;/h1>
+                        </code>
+                    </pre>
+                    </article>
+                </div>
+                <!-- /.col-09 -->
+
+                <aside class="col-03">
+                    <h3>Réseaux sociaux</h3>
+                    <ul>
+                        <li>
+                            <a href="/">Réseau 01</a>
+                        </li>
+                        <li>
+                            <a href="/">Réseau 01</a>
+                        </li>
+                        <li>
+                            <a href="/">Réseau 01</a>
+                        </li>
+                    </ul>
+
+                </aside>
+
+            </section>
+
+            <footer>
+                <div class="col-12">
+                    <h3>A propos</h3>
+                    <ul>
+                        <li>Copyright &copy; bibibricodeur</li>
+                        <li>"A ce Jonathan le Goéland qui sommeille en chacun de nous." Richard BACH</li>
+                        <li id="jetaivu"></li>
+                    </ul>
+                </div>
+            </footer>
+
+        </main>
+
+        <a href="#hautPage" class="bouton bouton-normal" id="boutonRemonter"
+        title="Clic pour remonter en haut de cette satanée page">Remonter</a>
+
+        <script src="js/localisation.js"></script>
+        <script>
+            // https://developer.mozilla.org/fr/docs/Web/API/GlobalEventHandlers/onscroll
+            window.onscroll = function () {
+                afficherBouton()
+            };
+            function afficherBouton() {
+                //console.log('afficher ou cacher bouton remonter');
+                // https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById
+                var elem = document.getElementById('boutonRemonter');
+                var nombrePixels = window.pageYOffset | document.body.scrollTop;
+                // console.log('descendu de ' + nombrePixels + 'pixels');
+                if (nombrePixels > 360) {
+                    elem.style.display = 'block';
+                } else if (nombrePixels <= 360) {
+                    elem.style.display = 'none';
+                }
+            }
+        </script>
+    </body>
+
+</html>

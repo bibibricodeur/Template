@@ -1,0 +1,283 @@
+/***
+Description: 
+Dependances: 
+Copyright (c) 20191111 bibi.
+License: WTFPL
+***/
+
+:root {
+    --couleur-principale: #176677;
+    --couleur-principale-texte: #2a2a2a;
+    --couleur-grise: #777;
+    --couleur-lien: #1d89ff;
+    --couleur-blanche: #fff;
+    --couleur-succes: #4CAF50;
+    --couleur-info: #008CBA;
+    --couleur-danger: #f44336;
+    --couleur-normale: #e6e6e6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1rem;
+    /*font-weight: 390;*/
+    line-height: 1.3;
+    background: #fff;
+    color: var(--couleur-principale-texte);
+    margin: 0;
+    padding: 0;
+}
+
+.centrer {
+    text-align: center;
+}
+
+/* Grilles */
+
+.col-01 {
+    width: 8.333333333333332%;
+}
+
+.col-02 {
+    width: 16.666666666666664%;
+}
+
+.col-03 {
+    width: 25%;
+}
+
+.col-04 {
+    width: 33.33333333333333%;
+}
+
+.col-05 {
+    width: 41.66666666666667%;
+}
+
+.col-06 {
+    width: 50%;
+}
+
+.col-07 {
+    width: 58.333333333333336%;
+}
+
+.col-08 {
+    width: 66.66666666666666%;
+}
+
+.col-09 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333333334%;
+}
+
+.col-11 {
+    width: 91.66666666666666%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.flex-conteneur {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 100%;
+}
+
+/* Typographies */
+
+h1 {
+    font-size: 2.5rem;
+    /*line-height: 1.2;*/
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Liens */
+
+a {
+    text-decoration: none;
+    color: var(--couleur-lien);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--couleur-noire);
+}
+
+ul {
+    list-style-type: none;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section, aside {
+    padding: 0.9em;
+}
+
+/* Formulaires */
+
+input[type=text], input[type=password], input[type=email], input[type=search], input[type=number], input[type=file], input[type=tel], input[type=url], select, textarea {
+    height: 30px;
+    width: 100%;
+    margin: 10px auto;
+    font-size: 1rem;
+    background: #f5f5f5;
+    border: 1px solid #2a2a2a;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    padding-left: 0.3em;
+}
+
+input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, input[type=search]:hover, input[type=number]:hover, input[type=file]:hover, input[type=tel]:hover, input[type=url]:hover, select:hover, textarea:hover {
+    border-color: var(--couleur-principale-texte);
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, input[type=number]:focus, input[type=file]:focus, input[type=tel]:focus, input[type=url]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--couleur-principale);
+}
+
+textarea {
+    min-height: 70px;
+    padding-top: 0.3em;
+}
+
+/* Boutons */
+
+button, .bouton, [type=submit] {
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    outline: none;
+    text-decoration: none;
+    color: var(--couleur-blanche);
+    font-size: 1rem;
+    background: var(--couleur-principale-texte);
+    border: 1px solid var(--couleur-principale-texte);
+    border-radius: 7px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover, .bouton:hover, [type=submit]:hover, button:focus, .bouton:focus, [type=submit]:focus {
+    opacity: 0.7;
+}
+
+button:active, .bouton:active, [type=submit]:active {
+    opacity: 0.9;
+}
+
+.bouton-succes {
+    background: var(--couleur-succes);
+}
+
+.bouton-info {
+    background: var(--couleur-info);
+}
+
+.bouton-danger {
+    background: var(--couleur-danger);
+}
+
+.bouton-normal {
+    background: var(--couleur-normale);
+    color: #2a2a2a;
+}
+
+/* Tableaux */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 3em;
+}
+
+th, tr, td {
+    border: 1px solid #777;
+    padding: 7px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(92, 92, 92);
+    color: white;
+}
+
+/* Codes */
+
+pre {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+pre code {
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code {
+    background: var(--couleur-blanche);
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 3px 6px;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Fin */
